@@ -294,7 +294,10 @@ const Sidebar: React.FC = () => {
             </button>
             {/* Payroll Button */}
             <a
-              href="https://portal-selector.vercel.app/"
+              href={user?.role === 'admin'
+                ? "https://frontend-silk-two-26.vercel.app/#/login"
+                : "https://employee-portal-omega-roan.vercel.app/"
+              }
               target="_blank"
               rel="noopener noreferrer"
               className="w-full flex items-center gap-3 px-3 py-1.5 text-white/70 hover:text-white hover:bg-white/10 transition-colors rounded-md text-[15px]"
