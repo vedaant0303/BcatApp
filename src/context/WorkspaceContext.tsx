@@ -102,14 +102,17 @@ export const WorkspaceProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [currentChannel, setCurrentChannel] = useState<Channel | null>(null);
   const [currentConversation, setCurrentConversation] = useState<Conversation | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [currentView, setCurrentView] = useState<ViewType>('messages');
 
   const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
   const fetchWorkspaces = useCallback(async () => {
-    if (!token) return;
+    if (!token) {
+      setLoading(false);
+      return;
+    }
 
     setLoading(true);
     try {
