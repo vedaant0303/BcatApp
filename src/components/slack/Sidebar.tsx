@@ -311,14 +311,16 @@ const Sidebar: React.FC = () => {
             {/* Manage Employees - Admin Only */}
             {user?.role === 'admin' && (
               <a
-                href="/admin"
+                href="https://frontend-silk-two-26.vercel.app/#/login"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full flex items-center gap-3 px-3 py-1.5 text-white/70 hover:text-white hover:bg-white/10 transition-colors rounded-md text-[15px]"
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
-                Manage Employees
-                <span className="ml-auto text-[10px] bg-[#FF5722]/50 px-1.5 py-0.5 rounded">Admin</span>
+                <span className="flex-1">Manage Employees</span>
+                <span className="text-[10px] bg-[#FF5722]/50 px-1.5 py-0.5 rounded flex-shrink-0">Admin</span>
               </a>
             )}
           </div>
