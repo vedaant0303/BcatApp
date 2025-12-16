@@ -424,6 +424,16 @@ const Sidebar: React.FC = () => {
         onClose={() => setShowStartDM(false)}
         onSelect={handleDMSelect}
       />
+
+      {/* Create Channel Modal */}
+      <CreateChannelModal
+        isOpen={showCreateChannel}
+        onClose={() => setShowCreateChannel(false)}
+        onCreated={async (channel) => {
+          await fetchChannels();
+          selectChannel(channel);
+        }}
+      />
     </div>
   );
 };
@@ -586,15 +596,7 @@ const UserProfileSection: React.FC = () => {
         onClose={() => setShowProfileModal(false)}
       />
 
-      {/* Create Channel Modal */}
-      <CreateChannelModal
-        isOpen={showCreateChannel}
-        onClose={() => setShowCreateChannel(false)}
-        onCreated={async (channel) => {
-          await fetchChannels();
-          selectChannel(channel);
-        }}
-      />
+
     </div>
   );
 };
