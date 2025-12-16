@@ -71,7 +71,7 @@ npm run seed
 
 **Admin:**
 - Employee ID: `ADMIN001`
-- Password: `admin123`
+- Password: `sahil123`
 
 **Employees:**
 - Employee ID: `EMP001`, `EMP002`, `EMP003`, `EMP004`

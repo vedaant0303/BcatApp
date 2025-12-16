@@ -86,12 +86,13 @@ export function SocketProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (user && token) {
       const newSocket = io(SOCKET_URL, {
-        transports: ['websocket', 'polling'],
+        transports: ['polling'], // Use polling only for App Engine Standard
         autoConnect: true,
         reconnection: true,
         reconnectionAttempts: 5,
         reconnectionDelay: 1000,
       });
+
 
       newSocket.on('connect', () => {
         console.log('🔌 Socket connected');
