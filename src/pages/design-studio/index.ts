@@ -1,0 +1,9 @@
+export { default as BrandStrategy } from './BrandStrategy';
+export { default as SocialMedia } from './SocialMedia';
+export { default as UIUX } from './UIUX';
+export { default as DigitalMarketing } from './DigitalMarketing';
+export { default as Photography } from './Photography';
+export { default as ContentCreation } from './ContentCreation';
+export { default as PerformanceAnalysis } from './PerformanceAnalysis';
+export { default as CorporateBranding } from './CorporateBranding';
+export { default as PackagingLogo } from './PackagingLogo';

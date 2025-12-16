@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Branding Catalyst</title>
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --cursor-size: 20px;
+        --cursor-hover-size: 80px;
+        --brand-purple: #8E609B;
+        --brand-lavender: #E6D8EB;
+        --bg-dark: #1a0b1e;
+      }
+      body {
+        background-color: var(--bg-dark);
+        color: #ffffff;
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+        cursor: none; /* Hide default cursor for custom cursor effect */
+      }
+      /* Show native cursor on workspace pages */
+      body.workspace-page {
+        cursor: auto;
+      }
+      body.workspace-page * {
+        cursor: auto;
+      }
+      h1, h2, h3, h4, .brand-font {
+        font-family: 'Oswald', sans-serif;
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--bg-dark);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--brand-purple);
+      }
+
+      /* Custom scrollbar for modals */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 3px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #d1d1d1;
+        border-radius: 3px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: var(--brand-purple);
+      }
+
+      .no-scroll {
+        overflow: hidden;
+      }
+
+      /* Mobile Optimizations */
+      @media (max-width: 768px) {
+        body {
+          cursor: auto; /* Show default cursor on mobile */
+        }
+        
+        /* Improve touch targets */
+        button, a, input, textarea, select {
+          min-height: 44px;
+        }
+        
+        /* Smooth scrolling for mobile */
+        html {
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+        }
+        
+        /* Hide custom cursor on touch devices */
+        .custom-cursor {
+          display: none !important;
+        }
+        
+        /* Better text rendering on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+        
+        /* Prevent zoom on input focus (iOS) */
+        input, textarea, select {
+          font-size: 16px !important;
+        }
+      }
+
+      /* Mobile Menu Styles */
+      .mobile-menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Hide scrollbar utility */
+      .scrollbar-hide {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;  /* Chrome, Safari and Opera */
+      }
+    </style>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1136553458464513');
+    fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+</head>
+  <body>
+    <!-- Meta Pixel noscript fallback -->
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1136553458464513&amp;ev=PageView&amp;noscript=1"
+    /></noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
